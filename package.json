@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "grimoirejs-fundamental": "^0.7.5"
+    "grimoirejs-fundamental": "beta",
+    "grimoirejs-math": "^1.8.1"
   },
   "scripts": {
     "build": "browserify -v -d index.babel.js -t [ babelify ] | exorcist index.js.map -b ./ > index.js",
@@ -16,8 +17,13 @@
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
     "exorcist": "^0.4.0",
-    "grimoirejs-aabb-debug": "git://github.com/GrimoireGL/grimoirejs-aabb-debug.git#master",
-    "grimoirejs-preset-basic": "^1.2.3",
+    "grimoirejs": "beta",
+    "grimoirejs-forward-shading": "beta",
     "watchify": "^3.7.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
